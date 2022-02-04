@@ -1,0 +1,27 @@
+{
+  "name": "playlist",
+  "version": "1.0.0",
+  "description": "Playlist de Musica Blu",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasnix/playlist.git"
+  },
+  "author": "Lucas Dev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasnix/playlist/issues"
+  },
+  "homepage": "https://github.com/lucasnix/playlist#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "mongoose": "^6.2.0",
+    "nodemon": "^2.0.15"
+  }
+}
