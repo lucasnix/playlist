@@ -3,6 +3,7 @@ const express = require("express");
 const connectToDb = require("./database/db");
 const path = require("path");
 const Music = require("./model/Music");
+const { find } = require("./model/Music");
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -13,7 +14,10 @@ app.use(express.urlencoded());
 
 connectToDb();
 
-app.get("/", (req, res) => {
+app.get("/", async (req, res) => {
+  const playlist = await Music.find();
+  res.render("index", { playlist });
+  //console.log(playlist);
   res.render("index");
 });
 
